@@ -1,0 +1,2 @@
+client e session acces korte AuthProvider hisabe NextAuthSession Provider banaisi jeta "use client"
+server a use korte chaile getServerSession use korte hobe and also NEXTAUTH_SECRET icchamoto set krte hbe .env.local e

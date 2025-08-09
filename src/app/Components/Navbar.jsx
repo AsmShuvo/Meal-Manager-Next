@@ -26,8 +26,9 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div>
+        <div className="space-x-1">
           <button onClick={()=>signIn()} >Login</button>
+          <Link href={"/register"}><button >Register</button></Link>
         </div>
       </div>
     </nav>

@@ -1,14 +1,14 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 
-const handler = NextAuth({
+export const authOptions = {
   providers: [
     CredentialsProvider({
       name: "Credentials",
       credentials: {
         username: { label: "Username", type: "text", placeholder: "John Doe" },
         email: { label: "Email", type: "text", placeholder: "zyx@gmail.com" },
-        password: { label: "Password", type: "email" },
+        password: { label: "Password", type: "password" },
       },
       async authorize(credentials, req) {
         const user = { id: "1", name: "J Smith", email: "jsmith@example.com" };
@@ -21,6 +21,8 @@ const handler = NextAuth({
       },
     }),
   ],
-});
+}
+
+const handler = NextAuth(authOptions);
 
 export { handler as GET, handler as POST };
